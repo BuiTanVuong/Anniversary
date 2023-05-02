@@ -1,0 +1,25 @@
+{
+  "name": "Anniversary",
+  "description": "",
+  "version": "1.0.0.1",
+  "manifest_version": 3,
+  "permissions": [
+    "activeTab",
+    "storage"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "Anniversary",
+    "default_icon": "src/assets/icon/icon.png",
+    "default_popup": "popup.html"
+  },
+  "host_permissions": ["http://*/*", "https://*/*"],
+  "chrome_url_overrides" : {
+    "PAGE_TO_OVERRIDE": "/src/index.html"
+  },
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self';"
+  }
+}
